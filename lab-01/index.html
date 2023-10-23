@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 01</title>
+    <style>
+      h1 {
+        background-color: rgb(91, 182, 182);
+      }
+
+      p {
+        padding: 25px;
+        display: block;
+        border: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Sports Favorites Header</header>
+
+    <main>
+      <h1>Class 1 Lab</h1>
+      <script>
+        let favSoccerTeam = prompt("What is your favorite soccer team?");
+
+        if (favSoccerTeam == null || favSoccerTeam == "") {
+          alert("There are too many good teams to choose a favorite!");
+          console.log(`The user doesn't have a favorite soccer team`);
+        } else {
+          alert(`Agreed, ${favSoccerTeam} is fun to watch!`);
+          console.log(`The user's favorite soccer team is ${favSoccerTeam}`);
+        }
+
+        let favFood = prompt("What is your favorite stadium food?");
+
+        if (favFood == null || favFood == "") {
+          alert("There is too much delicious stadium food to choose one!");
+          console.log(`The user doesn't have a favorite stadium food`);
+        } else {
+          alert(`There's nothing like eating ${favFood} at the stadium.`);
+          console.log(`The user's favorite stadium food is ${favFood}`);
+        }
+
+        let favMascot = prompt("What is your favorite college mascot?");
+
+        if (favMascot == null || favMascot == "") {
+          alert("Mascots are hard to choose from!");
+          console.log(`The user doesn't have a favorite college mascot`);
+        } else {
+          alert(`The ${favMascot} is such a cool mascot!`);
+          console.log(`The user's favorite college mascot is ${favMascot}`);
+        }
+
+        let favRivalry = prompt("What is your favorite sports rivalry?");
+
+        if (favRivalry == null || favRivalry == "") {
+          alert("Rivalries are overrated anyways!");
+          console.log(`The user doesn't have a favorite sports rivalry`);
+        } else {
+          alert(`The ${favRivalry} rivalry is an intense one!`);
+          console.log(`The user's favorite sports rivalry is ${favRivalry}`);
+        }
+
+        if (
+          favSoccerTeam == null ||
+          favSoccerTeam == "" ||
+          favFood == null ||
+          favFood == "" ||
+          favMascot == null ||
+          favMascot == "" ||
+          favRivalry == null ||
+          favRivalry == ""
+        ) {
+          alert("These questions make it too hard to choose favorites!");
+        } else {
+          alert(
+            `Your favorite soccer team is ${favSoccerTeam} and while at the stadium you enjoy eating ${favFood}. Your favorite college mascot is ${favMascot} and your favorite sports rivalry is ${favRivalry}.`
+          );
+        }
+      </script>
+
+      <p style="background-color: burlywood; color: rgb(40 39 39);">
+        What is your favorite soccer team?
+      </p>
+      <p style="background-color: lightslategray; color: black">
+        What is your favorite stadium food?
+      </p>
+      <p style="background-color: rgb(155, 216, 218); color: blue">
+        What is your favorite college mascot?
+      </p>
+      <p style="background-color: bisque; color: crimson">
+        What is your favorite sports rivalry?
+      </p>
+    </main>
+
+    <footer>This is the footer</footer>
+  </body>
+</html>

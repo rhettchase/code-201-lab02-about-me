@@ -2,14 +2,25 @@
 
 let visitorName = getName();
 
-alert(`Welcome to my page, ${visitorName}!`);
+for (let i = 0; i < 2; i++) {
+  if (visitorName === null || visitorName === "") {
+    visitorName = prompt(
+      "C'mon, give me your name for a customized experience!"
+    );
+  }
+}
 
+if (visitorName === null || visitorName === "") {
+  alert(`Welcome to my page, friend`);
+} else {
+  alert(`Welcome to my page, ${visitorName}!`);
+}
 
 let sportResp = prompt("Did Rhett Play soccer? (Yes/No)")
   .charAt(0)
   .toUpperCase();
 
-console.log(sportResp);
+// console.log(sportResp);
 
 if (sportResp === "Y") {
   alert("That's correct, she did play soccer!");
@@ -74,19 +85,8 @@ function getName() {
   return userName;
 }
 
-alert(`Thanks for playing ${visitorName}!`);
-
-// function greetUser(name) {
-//   while (name === null || name === "") {
-//     name = prompt("Please provide your name for a customized experience");
-//   }
-
-//   if (name === null || name === "") {
-//     document.write("Hi, friend, welcome to website");
-//   } else {
-//     document.write("Hi " + name + ", welcome to my website!");
-//   }
-// }
-
-
-
+if (visitorName === null || visitorName === "") {
+  alert(`Thanks for playing, friend`);
+} else {
+  alert(`Thanks for playing, ${visitorName}!`);
+}

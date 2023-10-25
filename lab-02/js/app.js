@@ -35,11 +35,11 @@ const bioAnswers = [
 ];
 
 // question 1
-let sportResp = prompt("Did Rhett Play soccer? (Yes/No)")
+let sportResp = prompt(bioAnswers[0][0])
   .charAt(0)
   .toUpperCase();
 
-if (sportResp === "Y") {
+if (sportResp === bioAnswers[0][1]) {
   alert("That's correct, she did play soccer!");
   correctAnswerCount++;
   //   console.log('That\'s correct, she did play soccer!');
@@ -48,13 +48,15 @@ if (sportResp === "Y") {
   //   console.log('Actually, that\'s incorrect, she did play soccer.');
 }
 
-/*
+bioAnswers[0].push(sportResp);
+
+
 // question 2
-let schoolResp = prompt("Did Rhett go to school for engineering? (Yes/No)")
+let schoolResp = prompt(bioAnswers[1][0])
   .charAt(0)
   .toUpperCase();
 
-if (schoolResp === "N") {
+if (schoolResp === bioAnswers[1][1]) {
   alert("That's correct, she didn't study engineering.");
   correctAnswerCount++;
   // console.log("That's correct, she didn't study engineering.");
@@ -63,12 +65,14 @@ if (schoolResp === "N") {
   // console.log("Actually, that's incorrect, she did not study engineering.");
 }
 
+bioAnswers[1].push(schoolResp);
+
 // question 3
-let militaryResp = prompt("Did Rhett service in the military? (Yes/No)")
+let militaryResp = prompt(bioAnswers[2][0])
   .charAt(0)
   .toUpperCase();
 
-if (militaryResp === "Y") {
+if (militaryResp === bioAnswers[2][1]) {
   alert("That's correct, she did serve in the Air Force!");
   correctAnswerCount++;
   // console.log("That's correct, she did serve in the Air Force!");
@@ -77,12 +81,14 @@ if (militaryResp === "Y") {
   // console.log("Actually, that's incorrect, she did serve in the military.");
 }
 
+bioAnswers[2].push(schoolResp);
+
 // question 4
-let oceanResp = prompt("Does Rhett enjoy the ocean? (Yes/No)")
+let oceanResp = prompt(bioAnswers[3][0])
   .charAt(0)
   .toUpperCase();
 
-if (oceanResp === "Y") {
+if (oceanResp === bioAnswers[3][1]) {
   alert("That's correct, she absolutely loves the ocean!");
   correctAnswerCount++;
   // console.log("That's correct, she absolutely loves the ocean!");
@@ -91,12 +97,14 @@ if (oceanResp === "Y") {
   // console.log("Actually, that's incorrect, she does love the ocean");
 }
 
+bioAnswers[3].push(schoolResp);
+
 // question 5
-let hometownResp = prompt("Was Rhett's hometown Detroit? (Yes/No)")
+let hometownResp = prompt(bioAnswers[4][0])
   .charAt(0)
   .toUpperCase();
 
-if (hometownResp === "N") {
+if (hometownResp === bioAnswers[4][1]) {
   alert("That's correct, she's not from Detroit, she's from San Diego.");
   correctAnswerCount++;
   // console.log("That's correct, she's not from Detroit, she's from San Diego.");
@@ -106,6 +114,8 @@ if (hometownResp === "N") {
   );
   // console.log("Actually, that's incorrect, she's not from Detroit, she's from San Diego.");
 }
+
+bioAnswers[4].push(schoolResp);
 
 
 // question 6 - guess a number
@@ -123,8 +133,12 @@ for (attempt = 1; attempt <= 4; attempt++) {
     break;
   } else if (numberGuess < answer) {
     alert("You're too low");
-  } else alert("You're too high");
-  console.log(attempt);
+  } else if (numberGuess > answer) {
+    alert("You're too high");
+  } else {
+    alert("Please make sure to enter a number");
+  }
+  // console.log(attempt);
 }
 
 if (numberGuess === answer) {
@@ -196,4 +210,3 @@ if (visitorName === null || visitorName === "") {
 } else {
   alert(`Thanks for playing, ${visitorName}!`);
 }
-*/

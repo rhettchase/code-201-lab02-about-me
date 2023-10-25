@@ -8,7 +8,7 @@ I built an HTML website that incorporates an external CSS stylesheet and externa
 
 ### Links and Resources
 
-- [submission PR](https://rhettchase.github.io/code-201/lab-02/index.html)
+- [submission PR](https://github.com/rhettchase/code-201/tree/main/lab-02)
 - [CSS Almanac](https://css-tricks.com/almanac/)
 - [CSS Lists](https://www.w3schools.com/css/css_list.asp)
 

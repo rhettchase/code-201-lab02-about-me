@@ -117,6 +117,8 @@ if (hometownResp === bioAnswers[4][1]) {
 
 bioAnswers[4].push(schoolResp);
 
+console.log(bioAnswers);
+
 
 // question 6 - guess a number
 let answer = 7;
@@ -210,3 +212,4 @@ if (visitorName === null || visitorName === "") {
 } else {
   alert(`Thanks for playing, ${visitorName}!`);
 }
+

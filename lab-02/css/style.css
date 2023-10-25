@@ -1,3 +1,94 @@
+/* Base Styles
+reference: skeleton
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) 
+source: Skeleton
+*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #222;
+}
+
+/* Typography
+reference: skeleton
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem; /* add padding for space left of headers */
+  font-weight: 300;
+}
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  text-align: center;
+  background-color: aquamarine;
+}
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+  background-color: rgb(139, 150, 171); /* added background color */
+}
+h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 em {
   color: blue;
   font-style: italic;
@@ -7,7 +98,11 @@ strong {
   font-weight: bold;
 }
 
-h1 {
+p {
+  margin-top: 0;
+}
+
+/* h1 {
   font-size: 2.5em;
   text-align: center;
   background-color: aquamarine;
@@ -15,10 +110,9 @@ h1 {
   margin-bottom: 0.2em;
   margin-left: 0.2em;
   width: 90%;
-}
+} */
 
-h2 {
-  font-size: 2em; /* 30px/16=1.875em */
+/* h2 {
   text-align: center;
   background-color: rgb(139, 150, 171);
   display: block;
@@ -28,22 +122,58 @@ h2 {
   width: 90%;
   display: inline-block;
   padding: 0.2em;
-}
+} 
+
 
 p {
   font-family: Georgia, Times, serif;
-  font-size: 1.1em; /* 14px/16=0.875em */
+  font-size: 1.1em; 
   line-height: 1.8em;
   text-align: justify;
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   margin-left: 0.2em;
-  /* display: block; */
   width: 90%;
-  /* outline: 3px solid red; */
+}
+*/
+
+/* Links
+reference: skeleton
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1eaedb;
+}
+a:hover {
+  color: #0fa0ce;
 }
 
+/* Lists
+reference: skeleton
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+}
+ol,
+ul {
+  padding-left: 2rem; 
+  margin-top: 0;
+  background-color: blanchedalmond;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 1rem;
+}
+
+/* ul {
   list-style-type: square;
   list-style-position: inside;
   font-size: 1em;
@@ -52,7 +182,7 @@ ul {
   margin-bottom: 0.2em;
   margin-left: 0.2em;
   width: 90%;
-}
+} */
 
 img.profile {
   float: left;
@@ -61,16 +191,12 @@ img.profile {
 }
 
 .banner-container {
-    text-align: center;
+  text-align: center;
 }
 
 img.header {
-    width: 80%; 
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+  width: 80%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
-
-
-
-

@@ -25,6 +25,15 @@ if (visitorName === null || visitorName === "") {
   alert(`Welcome to my page, ${visitorName}!`);
 }
 
+// stretch goals
+const bioAnswers = [
+  ["Did Rhett Play soccer? (Yes/No)", "Y"],
+  ["Did Rhett go to school for engineering? (Yes/No)", "N"],
+  ["Did Rhett service in the military? (Yes/No)", "Y"],
+  ["Does Rhett enjoy the ocean? (Yes/No)", "Y"],
+  ["Was Rhett's hometown Detroit? (Yes/No)", "N"]
+];
+
 // question 1
 let sportResp = prompt("Did Rhett Play soccer? (Yes/No)")
   .charAt(0)
@@ -39,6 +48,7 @@ if (sportResp === "Y") {
   //   console.log('Actually, that\'s incorrect, she did play soccer.');
 }
 
+/*
 // question 2
 let schoolResp = prompt("Did Rhett go to school for engineering? (Yes/No)")
   .charAt(0)
@@ -186,4 +196,4 @@ if (visitorName === null || visitorName === "") {
 } else {
   alert(`Thanks for playing, ${visitorName}!`);
 }
-
+*/

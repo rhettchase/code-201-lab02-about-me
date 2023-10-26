@@ -2,7 +2,7 @@
 
 let correctAnswerCount = 0;
 
-
+/*
 function getName() {
   let userName = prompt("Hi, what is your name?");
   return userName;
@@ -25,19 +25,39 @@ if (visitorName === null || visitorName === "") {
   alert(`Welcome to my page, ${visitorName}!`);
 }
 
+*/
+
+// bio question function
+
+function bioQuestion(i) {
+  let response = prompt(bioAnswers[i][0]).charAt(0).toUpperCase();
+
+  if (response === bioAnswers[i][1]) {
+    alert("That's correct!");
+    correctAnswerCount++;
+  } else {
+    alert("Actually, that's incorrect.");
+  }
+}
 // stretch goals
 const bioAnswers = [
   ["Did Rhett Play soccer? (Yes/No)", "Y"],
   ["Did Rhett go to school for engineering? (Yes/No)", "N"],
   ["Did Rhett service in the military? (Yes/No)", "Y"],
   ["Does Rhett enjoy the ocean? (Yes/No)", "Y"],
-  ["Was Rhett's hometown Detroit? (Yes/No)", "N"]
+  ["Was Rhett's hometown Detroit? (Yes/No)", "N"],
 ];
 
+bioQuestion(0);
+bioQuestion(1);
+bioQuestion(2);
+bioQuestion(3);
+bioQuestion(4);
+
+console.log(correctAnswerCount);
+/*
 // question 1
-let sportResp = prompt(bioAnswers[0][0])
-  .charAt(0)
-  .toUpperCase();
+let sportResp = prompt(bioAnswers[0][0]).charAt(0).toUpperCase();
 
 if (sportResp === bioAnswers[0][1]) {
   alert("That's correct, she did play soccer!");
@@ -48,13 +68,11 @@ if (sportResp === bioAnswers[0][1]) {
   //   console.log('Actually, that\'s incorrect, she did play soccer.');
 }
 
+
 bioAnswers[0].push(sportResp);
 
-
 // question 2
-let schoolResp = prompt(bioAnswers[1][0])
-  .charAt(0)
-  .toUpperCase();
+let schoolResp = prompt(bioAnswers[1][0]).charAt(0).toUpperCase();
 
 if (schoolResp === bioAnswers[1][1]) {
   alert("That's correct, she didn't study engineering.");
@@ -68,9 +86,7 @@ if (schoolResp === bioAnswers[1][1]) {
 bioAnswers[1].push(schoolResp);
 
 // question 3
-let militaryResp = prompt(bioAnswers[2][0])
-  .charAt(0)
-  .toUpperCase();
+let militaryResp = prompt(bioAnswers[2][0]).charAt(0).toUpperCase();
 
 if (militaryResp === bioAnswers[2][1]) {
   alert("That's correct, she did serve in the Air Force!");
@@ -84,9 +100,7 @@ if (militaryResp === bioAnswers[2][1]) {
 bioAnswers[2].push(schoolResp);
 
 // question 4
-let oceanResp = prompt(bioAnswers[3][0])
-  .charAt(0)
-  .toUpperCase();
+let oceanResp = prompt(bioAnswers[3][0]).charAt(0).toUpperCase();
 
 if (oceanResp === bioAnswers[3][1]) {
   alert("That's correct, she absolutely loves the ocean!");
@@ -100,9 +114,7 @@ if (oceanResp === bioAnswers[3][1]) {
 bioAnswers[3].push(schoolResp);
 
 // question 5
-let hometownResp = prompt(bioAnswers[4][0])
-  .charAt(0)
-  .toUpperCase();
+let hometownResp = prompt(bioAnswers[4][0]).charAt(0).toUpperCase();
 
 if (hometownResp === bioAnswers[4][1]) {
   alert("That's correct, she's not from Detroit, she's from San Diego.");
@@ -118,7 +130,6 @@ if (hometownResp === bioAnswers[4][1]) {
 bioAnswers[4].push(schoolResp);
 
 console.log(bioAnswers);
-
 
 // question 6 - guess a number
 let answer = 7;
@@ -144,11 +155,12 @@ for (attempt = 1; attempt <= 4; attempt++) {
 }
 
 if (numberGuess === answer) {
-  alert(`Congrats, you solved this in ${attempt} attempt(s). The correct answer was ${answer}`);
+  alert(
+    `Congrats, you solved this in ${attempt} attempt(s). The correct answer was ${answer}`
+  );
 } else {
   alert(`The correct answer was ${answer}. Better luck next time!`);
 }
-
 
 // question 7 - multiple choice
 let places = [
@@ -160,7 +172,7 @@ let places = [
   ["f", "Australia"],
 ];
 let placeGuess;
-let placeAnswer = 'd';
+let placeAnswer = "d";
 
 for (let i = 1; i <= 6; i++) {
   placeGuess = prompt(
@@ -204,8 +216,6 @@ for (let i = 1; i <= 6; i++) {
 alert(`You have a total of ${correctAnswerCount} correct answers`);
 console.log(`Number of correct answers: ${correctAnswerCount}`);
 
-
-
 // say goodbye to user
 if (visitorName === null || visitorName === "") {
   alert(`Thanks for playing, friend`);
@@ -213,3 +223,4 @@ if (visitorName === null || visitorName === "") {
   alert(`Thanks for playing, ${visitorName}!`);
 }
 
+*/

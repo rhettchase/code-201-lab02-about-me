@@ -48,13 +48,13 @@ const bioAnswers = [
   ["Was Rhett's hometown Detroit? (Yes/No)", "N"],
 ];
 
-bioQuestion(0);
-bioQuestion(1);
-bioQuestion(2);
-bioQuestion(3);
-bioQuestion(4);
+// bioQuestion(0);
+// bioQuestion(1);
+// bioQuestion(2);
+// bioQuestion(3);
+// bioQuestion(4);
 
-console.log(correctAnswerCount);
+// console.log(correctAnswerCount);
 /*
 // question 1
 let sportResp = prompt(bioAnswers[0][0]).charAt(0).toUpperCase();
@@ -130,38 +130,42 @@ if (hometownResp === bioAnswers[4][1]) {
 bioAnswers[4].push(schoolResp);
 
 console.log(bioAnswers);
-
+*/
 // question 6 - guess a number
-let answer = 7;
-let attempt;
-let numberGuess;
+function numberGame() {
 
-for (attempt = 1; attempt <= 4; attempt++) {
-  numberGuess = parseInt(
-    prompt("Let's play a game! Guess a number from 1 - 10")
-  );
-  if (numberGuess === answer) {
-    alert("You guessed right, that's the correct answer!");
-    correctAnswerCount++;
-    break;
-  } else if (numberGuess < answer) {
-    alert("You're too low");
-  } else if (numberGuess > answer) {
-    alert("You're too high");
-  } else {
-    alert("Please make sure to enter a number");
+  let answer = 7;
+  let attempt;
+  let numberGuess;
+
+  for (attempt = 1; attempt <= 4; attempt++) {
+    numberGuess = parseInt(
+      prompt("Let's play a game! Guess a number from 1 - 10")
+    );
+    if (numberGuess === answer) {
+      alert("You guessed right, that's the correct answer!");
+      correctAnswerCount++;
+      break;
+    } else if (numberGuess < answer) {
+      alert("You're too low");
+    } else if (numberGuess > answer) {
+      alert("You're too high");
+    } else {
+      alert("Please make sure to enter a number");
+    }
+    // console.log(attempt);
   }
-  // console.log(attempt);
+
+  if (numberGuess === answer) {
+    alert(
+      `Congrats, you solved this in ${attempt} attempt(s). The correct answer was ${answer}`
+    );
+  } else {
+    alert(`The correct answer was ${answer}. Better luck next time!`);
+  }
 }
 
-if (numberGuess === answer) {
-  alert(
-    `Congrats, you solved this in ${attempt} attempt(s). The correct answer was ${answer}`
-  );
-} else {
-  alert(`The correct answer was ${answer}. Better luck next time!`);
-}
-
+/*
 // question 7 - multiple choice
 let places = [
   ["a", "New Zealand"],

@@ -29,3 +29,4 @@ Additional functionality was added to the site, including a `number guessing gam
 - I refactored all questions into functions and called them together in the flow that I wanted
 - I converted the `multi-dimensional array` into separate single-dimension arrays to work from collections of like data: one for each of the questions and the correct answers
 - JB was the Driver and I was the Navigator during the in-class pair programming demo, when we collaborated on refactoring the number guessing game code into a function
+- test

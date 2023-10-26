@@ -26,4 +26,6 @@ Additional functionality was added to the site, including a `number guessing gam
 - I learned how to use the Google Chrome `inspect` dev tools to debug my CSS when it was not appearing how I was expecting it to. The ability to drill down into what was being interpreted/loaded on the page and click them on/off to see how that impacted the other parts was super enlightening
 - I used `for loops` to limit the number of attempts the user could answer, including a `break` statement to end the loop if the user answered correctly
 - To include the **correct answer count** functionality, I learned how to create a counter variable and then `increment` this count for each time the user answered the question correctly
-- For the five Yes/No questions, I stored the questions, correct answers, and responses in a `multi-dimensional array`. I used `push` to add the responses to the array after each response
+- I refactored all questions into functions and called them together in the flow that I wanted
+- I converted the `multi-dimensional array` into separate single-dimension arrays to work from collections of like data: one for each of the questions and the correct answers
+- JB was the Driver and I was the Navigator during the in-class pair programming demo, when we collaborated on refactoring the number guessing game code into a function

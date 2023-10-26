@@ -2,14 +2,198 @@
 
 let correctAnswerCount = 0;
 
+// const YesNo = ["Yes", "No"]
+
+const places = [
+  ["a", "New Zealand"],
+  ["b", "Thailand"],
+  ["c", "Switzerland"],
+  ["d", "Tanzania"],
+  ["e", "Yellowstone"],
+  ["f", "Australia"],
+];
+
+function getName() {
+  let userName = prompt("Hi, what is your name?");
+  return userName;
+}
+
+function welcomeMessage() {
+  for (let i = 0; i < 2; i++) {
+    if (userName === null || userName === "") {
+      userName = prompt(
+        "C'mon, give me your name for a customized game experience!"
+      );
+    }
+  }
+  if (userName === null || userName === "") {
+    alert(`Welcome to my page, friend`);
+  } else {
+    alert(`Welcome to my page, ${userName}!`);
+  }
+}
+
+
+
+// bio question function
+
+function bioQuestion(i) {
+  let response = prompt(questions[i]).charAt(0).toUpperCase();
+
+  if (response === answers[i]) {
+    alert("That's correct!");
+    correctAnswerCount++;
+  } else {
+    alert("Actually, that's incorrect.");
+  }
+  // console.log(answers[i]);
+}
+// stretch goals
+const questions = [
+  "Did Rhett Play soccer? (Yes/No)",
+  "Did Rhett go to school for engineering? (Yes/No)",
+  "Did Rhett service in the military? (Yes/No)",
+  "Does Rhett enjoy the ocean? (Yes/No)",
+  "Was Rhett's hometown Detroit? (Yes/No)",
+  "Let's play a game! Guess a number from 1 - 10",
+  "Which of the following places has Rhett NOT visited?",
+];
+
+const answers = ["Y", "N", "Y", "Y", "N", 7, "d"];
+
+// ask user for name
+let userName = getName();
+
+// customized welcome message with user's name
+welcomeMessage();
+
+// yes/no questions based on bio
+
+bioQuestion(0);
+bioQuestion(1);
+bioQuestion(2);
+bioQuestion(3);
+bioQuestion(4);
+
+// number game function call
+numberGame(5);
+
+// multiple choice travel question call
+favoriteTravel(6);
+
+// say goodbye to user and give them number of correct answers
+countAnswers();
+goodbyeMessage();
+
+// console.log(correctAnswerCount);
+
+// question 6 - guess a number
+function numberGame(i) {
+  let attempt;
+  let numberGuess;
+
+  for (attempt = 1; attempt <= 4; attempt++) {
+    numberGuess = parseInt(prompt(questions[i]));
+    if (numberGuess === answers[i]) {
+      alert("You guessed right, that's the correct answer!");
+      correctAnswerCount++;
+      break;
+    } else if (numberGuess < answers[i]) {
+      alert("You're too low");
+    } else if (numberGuess > answers[i]) {
+      alert("You're too high");
+    } else {
+      alert("Please make sure to enter a number");
+    }
+    // console.log(attempt);
+  }
+
+  if (numberGuess === answers[i]) {
+    alert(
+      `Congrats, you solved this in ${attempt} attempt(s). The correct answer was ${answers[i]}`
+    );
+  } else {
+    alert(`The correct answer was ${answers[i]}. Better luck next time!`);
+  }
+}
+
+// question 7 - multiple choice
+
+function favoriteTravel(j) {
+  let placeGuess;
+  for (let i = 1; i <= 6; i++) {
+    placeGuess = prompt(
+      "Which of the following places has Rhett NOT visited?" +
+        " " +
+        places[0][0] +
+        ": " +
+        places[0][1] +
+        ", " +
+        places[1][0] +
+        ": " +
+        places[1][1] +
+        ", " +
+        places[2][0] +
+        ": " +
+        places[2][1] +
+        ", " +
+        places[3][0] +
+        ": " +
+        places[3][1] +
+        ", " +
+        places[4][0] +
+        ": " +
+        places[4][1] +
+        ", " +
+        places[5][0] +
+        ": " +
+        places[5][1] +
+        ". Select a - f."
+    ).toLowerCase();
+    console.log(placeGuess);
+    if (placeGuess === answers[j]) {
+      alert("That's the correct answer, Rhett has never visited Tanzania");
+      correctAnswerCount++;
+      break;
+    } else {
+      alert("That's incorrect");
+      console.log(i);
+    }
+  }
+}
+
+function countAnswers() {
+  alert(`You have a total of ${correctAnswerCount} correct answers`);
+}
+
+// console.log(`Number of correct answers: ${correctAnswerCount}`);
+
+// say goodbye to user
+
+function goodbyeMessage() {
+  if (userName === null || userName === "") {
+    alert(`Thanks for playing, friend`);
+  } else {
+    alert(`Thanks for playing, ${userName}!`);
+  }
+}
+
+
+
+/*---------------------- OLD CODE BELOW (REFACTORED INTO FUNCTIONS)
+------------------------------------------------------------------ */
+
 /*
+
 function getName() {
   let userName = prompt("Hi, what is your name?");
   return userName;
 }
 
 // get user name question
+
 let visitorName = getName();
+
 
 for (let i = 0; i < 2; i++) {
   if (visitorName === null || visitorName === "") {
@@ -25,37 +209,7 @@ if (visitorName === null || visitorName === "") {
   alert(`Welcome to my page, ${visitorName}!`);
 }
 
-*/
 
-// bio question function
-
-function bioQuestion(i) {
-  let response = prompt(bioAnswers[i][0]).charAt(0).toUpperCase();
-
-  if (response === bioAnswers[i][1]) {
-    alert("That's correct!");
-    correctAnswerCount++;
-  } else {
-    alert("Actually, that's incorrect.");
-  }
-}
-// stretch goals
-const bioAnswers = [
-  ["Did Rhett Play soccer? (Yes/No)", "Y"],
-  ["Did Rhett go to school for engineering? (Yes/No)", "N"],
-  ["Did Rhett service in the military? (Yes/No)", "Y"],
-  ["Does Rhett enjoy the ocean? (Yes/No)", "Y"],
-  ["Was Rhett's hometown Detroit? (Yes/No)", "N"],
-];
-
-// bioQuestion(0);
-// bioQuestion(1);
-// bioQuestion(2);
-// bioQuestion(3);
-// bioQuestion(4);
-
-// console.log(correctAnswerCount);
-/*
 // question 1
 let sportResp = prompt(bioAnswers[0][0]).charAt(0).toUpperCase();
 
@@ -129,43 +283,6 @@ if (hometownResp === bioAnswers[4][1]) {
 
 bioAnswers[4].push(schoolResp);
 
-console.log(bioAnswers);
-*/
-// question 6 - guess a number
-function numberGame() {
-
-  let answer = 7;
-  let attempt;
-  let numberGuess;
-
-  for (attempt = 1; attempt <= 4; attempt++) {
-    numberGuess = parseInt(
-      prompt("Let's play a game! Guess a number from 1 - 10")
-    );
-    if (numberGuess === answer) {
-      alert("You guessed right, that's the correct answer!");
-      correctAnswerCount++;
-      break;
-    } else if (numberGuess < answer) {
-      alert("You're too low");
-    } else if (numberGuess > answer) {
-      alert("You're too high");
-    } else {
-      alert("Please make sure to enter a number");
-    }
-    // console.log(attempt);
-  }
-
-  if (numberGuess === answer) {
-    alert(
-      `Congrats, you solved this in ${attempt} attempt(s). The correct answer was ${answer}`
-    );
-  } else {
-    alert(`The correct answer was ${answer}. Better luck next time!`);
-  }
-}
-
-/*
 // question 7 - multiple choice
 let places = [
   ["a", "New Zealand"],
@@ -217,14 +334,6 @@ for (let i = 1; i <= 6; i++) {
   }
 }
 
-alert(`You have a total of ${correctAnswerCount} correct answers`);
-console.log(`Number of correct answers: ${correctAnswerCount}`);
 
-// say goodbye to user
-if (visitorName === null || visitorName === "") {
-  alert(`Thanks for playing, friend`);
-} else {
-  alert(`Thanks for playing, ${visitorName}!`);
-}
 
 */

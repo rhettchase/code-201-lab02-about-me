@@ -1,4 +1,4 @@
-# LAB - 02 (class-02 and class-03)
+# LAB - 02 (class-02, class-03, class-04)
 
 ## About me
 
@@ -27,6 +27,5 @@ Additional functionality was added to the site, including a `number guessing gam
 - I used `for loops` to limit the number of attempts the user could answer, including a `break` statement to end the loop if the user answered correctly
 - To include the **correct answer count** functionality, I learned how to create a counter variable and then `increment` this count for each time the user answered the question correctly
 - I refactored all questions into functions and called them together in the flow that I wanted
-- I converted the `multi-dimensional array` into separate single-dimension arrays to work from collections of like data: one for each of the questions and the correct answers
+- I converted the `multi-dimensional array` into separate `single-dimension arrays` to work from `collections of like data`: one for each of the questions and one for the correct answers
 - JB was the Driver and I was the Navigator during the in-class pair programming demo, when we collaborated on refactoring the number guessing game code into a function
-- test

@@ -10,7 +10,7 @@ Additional functionality was added to the site, including a `number guessing gam
 
 ### Links and Resources
 
-- [submission PR](https://github.com/rhettchase/code-201/tree/main/lab-02)
+- [submission PR](https://github.com/rhettchase/code-201-lab02-about-me/tree/main/lab-02)
 - [CSS Almanac](https://css-tricks.com/almanac/)
 - [CSS Lists](https://www.w3schools.com/css/css_list.asp)
 - [Skeleton CSS](http://getskeleton.com/#intro)
